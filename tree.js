@@ -12,6 +12,9 @@ class Tree {
     if (start > end) {
       return null;
     }
+    if (start === 0) {
+      mergeSort(array);
+    }
     const mid = Math.floor((start + end) / 2);
     const node = new Node(array[mid]);
     node.left = this.buildTree(array, start, mid - 1);
